@@ -1,25 +1,59 @@
-// USE WITH FIREBASE AUTH
-// import checkLoginStatus from './helpers/auth';
-import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
+import classNames from 'classnames';
+import feather from 'feather-icons';
 
 const init = () => {
-  document.querySelector('#app').innerHTML = `
-    <h1>HELLO! You are up and running!</h1>
-    <small>Open your dev tools</small><br />
-    <button class="btn btn-danger" id="click-me">Click ME!</button><br />
-    <hr />
-    <h2>These are font awesome icons:</h2>
-    <i class="fas fa-user fa-4x"></i> <i class="fab fa-github-square fa-5x"></i>
-  `;
-  console.warn('YOU ARE UP AND RUNNING!');
+  console.warn(feather.icons.circle.toSvg());
+  const DROPDOWN_ITEMS = [
+    {
+      title: 'Urban Activities',
+      boxColor: 'ui-green',
+      icon: feather.icons.heart.toSvg(),
+    },
+    {
+      title: 'Rural Activities',
+      boxColor: 'indigo-blue',
+      icon: feather.icons.star.toSvg(),
+    },
+    {
+      title: 'Emotional Activities',
+      boxColor: 'rust-orange',
+      icon: feather.icons.activity.toSvg(),
+    },
+    {
+      title: 'Emotional Activities',
+      boxColor: 'slime-green',
+      icon: feather.icons.airplay.toSvg(),
+    },
+    {
+      title: 'Emotional Activities',
+      boxColor: 'reg-brown',
+      icon: feather.icons.archive.toSvg(),
+    },
+    {
+      title: 'Emotional Activities',
+      boxColor: 'navy-blue',
+      icon: feather.icons.anchor.toSvg(),
+    },
+  ];
 
-  document
-    .querySelector('#click-me')
-    .addEventListener('click', () => console.warn('You clicked that button!'));
+  const domString = DROPDOWN_ITEMS.map((item) => {
+    const classes = classNames('dropdown-item-icon-box', {
+      [`dropdown-item-icon-box--${item.boxColor}`]: item.boxColor,
+    });
 
-  // USE WITH FIREBASE AUTH
-  // checkLoginStatus();
+    return `
+    <div class="dropdown-item-container">
+    <div class="${classes}">
+       ${item.icon}
+    </div>
+    <div class="dropdown-item-title">${item.title}</div>
+  </div>
+  <br/>
+    `;
+  }).join('');
+
+  document.querySelector('#app').innerHTML = domString;
 };
 
 init();
