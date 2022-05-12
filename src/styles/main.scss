@@ -2,7 +2,6 @@ $typography-font-size-base: 16px;
 $grey-600: #6F7287;
 $text-weight-text-semibold: 600;
 $text-line-height-body: 1.5;
-
 $dropdown-min-width: 250px;
 
 $dropdown-item-icon-box-colors: (
@@ -56,7 +55,6 @@ $dropdown-item-icon-box-colors: (
         align-items: center;
     }
 
-
     .dropdown-item-title {
         text-rendering: optimizeLegibility;
         font-size: $typography-font-size-base;
@@ -72,6 +70,7 @@ $dropdown-item-icon-box-colors: (
       #{$class-name}{
         background-color: map-get($map: $map, $key: "background-color");
       };
+
       &:hover {
         #{$class-name}{
           background-color: map-get($map: $map, $key: "hover-color");
