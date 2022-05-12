@@ -2,7 +2,6 @@ $typography-font-size-base: 16px;
 $grey-600: #6F7287;
 $text-weight-text-semibold: 600;
 $text-line-height-body: 1.5;
-
 $dropdown-min-width: 250px;
 
 .dropdown-item-container {
@@ -29,7 +28,6 @@ $dropdown-min-width: 250px;
         align-items: center;
     }
 
-
     .dropdown-item-title {
         text-rendering: optimizeLegibility;
         font-size: $typography-font-size-base;
@@ -39,7 +37,6 @@ $dropdown-min-width: 250px;
         margin-top: 10px;
     }
 
-    //initial dropdown colors
     .dropdown-item-icon-box--slime-green {
       background: rgba(133, 128, 13, 0.08);
     }
@@ -74,7 +71,6 @@ $dropdown-min-width: 250px;
             transform: rotate(11deg);
         }
 
-        //color transitions
         .dropdown-item-icon-box--slime-green {
             background: rgba(181, 175, 18, 0.16);
         }
