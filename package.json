@@ -33,7 +33,9 @@
     "@popperjs/core": "^2.9.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
+    "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
+    "feather-icons": "^4.29.0",
     "firebase": "^8.2.0"
   }
 }
