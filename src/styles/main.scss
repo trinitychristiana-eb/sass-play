@@ -69,7 +69,7 @@ $dropdown-item-icon-box-colors: (
 
       #{$class-name}{
         background-color: map-get($map: $map, $key: "background-color");
-      };
+      }
 
       &:hover {
         #{$class-name}{
