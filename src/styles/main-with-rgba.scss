@@ -15,6 +15,16 @@ $dropdown-item-icon-box-colors: (
   "navy-blue": rgba(13, 90, 133, 0.08),
 );
 
+// We could also use hex codes with this same implementation
+// $dropdown-item-icon-box-colors: (
+//   "slime-green": #0f0f0f,
+//   "ui-green": #0f0f0f,
+//   "indigo-blue": #0f0f0f,
+//   "rust-orange": #0f0f0f,
+//   "reg-brown": #0f0f0f,
+//   "navy-blue": #0f0f0f,
+// );
+
 .dropdown-item-container {
     min-width: $dropdown-min-width;
     max-width: 265px;
