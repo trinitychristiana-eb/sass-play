@@ -1,0 +1,75 @@
+$typography-font-size-base: 16px;
+$grey-600: #6F7287;
+$text-weight-text-semibold: 600;
+$text-line-height-body: 1.5;
+$dropdown-min-width: 250px;
+
+// We can do this if we decide to use the same color for hover and non hover
+// and just update the opacity.
+$dropdown-item-icon-box-colors: (
+  "slime-green": rgba(133, 128, 13, 0.08),
+  "ui-green": rgba(13, 133, 71, 0.08),
+  "indigo-blue": rgba(30, 13, 133, 0.08),
+  "rust-orange": rgba(133, 13, 13, 0.08),
+  "reg-brown": rgba(133, 85, 13, 0.08),
+  "navy-blue": rgba(13, 90, 133, 0.08),
+);
+
+.dropdown-item-container {
+    min-width: $dropdown-min-width;
+    max-width: 265px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    .dropdown-item-icon-box {
+        width: 37px;
+        height: 37px;
+        margin-top: 10px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropdown-item-title {
+        text-rendering: optimizeLegibility;
+        font-size: $typography-font-size-base;
+        font-weight: $text-weight-text-semibold;
+        line-height: $text-line-height-body;
+        padding-left: 8px;
+        margin-top: 10px;
+    }
+
+    @each $label, $value in $dropdown-item-icon-box-colors {
+      $class-name: ".dropdown-item-icon-box--#{$label}";
+
+      #{$class-name}{
+        background-color: $value
+      }
+
+      &:hover {
+        #{$class-name}{
+          background-color: rgba($value, .16)
+        }
+      }
+    };
+
+    &:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+        text-decoration: none;
+        outline: none;
+        transform: translateY(-3px);
+
+        .dropdown-item-icon-box svg {
+            transform: rotate(11deg);
+        }
+    }
+}
